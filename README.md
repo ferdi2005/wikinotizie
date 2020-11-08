@@ -3,9 +3,9 @@ Con questa gem è possibile effettuare il parsing della data di un articolo di W
 ## Utilizzo
 Una volta ottenuto il contenuto dell'articolo attraverso una cosa del genere,u sando per esempio la gem [mediawiki-ruby-api](https://github.com/wikimedia/mediawiki-ruby-api):
 ```
- require 'mediawiki_api'
- client = MediawikiApi::Client.new 'https://it.wikinews.org/w/api.php'
- content = client.query(prop: :revisions, rvprop: :content, titles: titolo_articolo, rvlimit: 1)["query"]["pages"]["#{pubblicato["pageid"]}"]["revisions"][0]["*"]
+require 'mediawiki_api'
+client = MediawikiApi::Client.new 'https://it.wikinews.org/w/api.php'
+content = client.query(prop: :revisions, rvprop: :content, titles: titolo_articolo, rvlimit: 1)["query"]["pages"]["#{pubblicato["pageid"]}"]["revisions"][0]["*"]
 ```
 è possibile poi fare
 ```
@@ -15,7 +15,6 @@ Si otterrà dunque una array contente: il contenuto dell'articolo (content), l'i
 ```
 content = [content, match, data, giorno, @rubydate, with_luogo, luogo] # luogo solo se with_luogo è true
 ```
-
 Nel caso in cui la gem non riesca ad effettuare il parsing, verrà restituito solamente false.
 ## Changelog
 ### 1.0.0 2020-11-08
