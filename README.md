@@ -17,6 +17,9 @@ content = [content, match, data, giorno, @rubydate, with_luogo, luogo] # luogo s
 ```
 Nel caso in cui la gem non riesca ad effettuare il parsing, verrà restituito solamente false.
 ## Changelog
+
+### 1.0.1 2021-01-11
+* Risoluzone di bug
 ### 1.0.0 2020-11-08
 * Release iniziale con parsing della data con i template usati su Wikinotizie
 ## Contributi

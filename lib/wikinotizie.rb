@@ -32,8 +32,7 @@ class Wikinotizie
               @rubydate = DateTime.parse(data.gsub(/#{italian_month}/, english_month))
             end
         end      
-            return [content, match, data, giorno, @rubydate, with_luogo] if with_luogo == false
-            return [content, match, data, giorno, @rubydate, with_luogo, luogo] if with_luogo == true
-        end
+        return [content, match, data, giorno, @rubydate, with_luogo] if with_luogo == false
+        return [content, match, data, giorno, @rubydate, with_luogo, luogo] if with_luogo == true
     end
 end

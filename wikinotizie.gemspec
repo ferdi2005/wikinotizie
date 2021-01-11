@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = 'wikinotizie'
-  s.version = "1.0.0"
-  s.date = "2020-11-08"
+  s.version = "1.0.1"
+  s.date = "2021-01-11"
   s.summary = "Parser di date per il template data di Wikinotizie"
   s.files = [
     "lib/wikinotizie.rb"
