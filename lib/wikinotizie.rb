@@ -24,7 +24,7 @@ class Wikinotizie
             giorno = match[2]
             with_luogo = false
         else
-            @funzionante = false
+            return false
         end
         months = [["gennaio", "Jan"], ["febbraio", "Feb"], ["marzo", "Mar"], ["aprile", "Apr"], ["maggio", "May"], ["giugno", "Jun"], ["luglio", "Jul"], ["agosto", "Aug"], ["settembre", "Sep"], ["ottobre", "Oct"], ["novembre", "Nov"], ["dicembre", "Dec"]]
         months.each do |italian_month, english_month|
@@ -32,11 +32,8 @@ class Wikinotizie
               @rubydate = DateTime.parse(data.gsub(/#{italian_month}/, english_month))
             end
         end      
-        unless @funzionante == false 
             return [content, match, data, giorno, @rubydate, with_luogo] if with_luogo == false
             return [content, match, data, giorno, @rubydate, with_luogo, luogo] if with_luogo == true
-        else
-            return false
         end
     end
 end
